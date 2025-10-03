@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ButtonLink, SocialButton } from "../Button";
+import toast from "react-hot-toast";
 
 const Footer = () => {
   const copyEmail = "ruther.diox44@gmail.com";
@@ -8,6 +9,7 @@ const Footer = () => {
   const handleCopy = () => {
     navigator.clipboard.writeText(copyEmail);
     setCopied(true);
+    toast(copyEmail + " Copied!");
 
     setTimeout(() => {
       setCopied(false);
@@ -72,6 +74,7 @@ const Footer = () => {
                 <div className="flex gap-1.5 md:gap-2 xl:gap-2.5">
                   <p className="text-white/50">{copyEmail}</p>
                   <button
+                    title="Copy Email"
                     onClick={handleCopy}
                     className="bg-primary secondary-body-uc px-2 md:px-2.5 xl:px-3 rounded-full text-white hover:bg-primary/70 transitions cursor-pointer"
                   >

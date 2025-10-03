@@ -4,6 +4,7 @@ import { Badge } from "./Badge";
 const Card = ({ image, alt, title, badgeText, role, year, onClick }) => {
   return (
     <div
+      title={title}
       onClick={onClick}
       className="flex flex-col gap-4 md:gap-6 xl:gap-8 cursor-pointer"
     >

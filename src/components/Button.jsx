@@ -3,7 +3,10 @@ import React from "react";
 export const Button = ({ displayText = "Download Resume" }) => {
   return (
     <button className="bg-primary rounded-full hover:bg-primary/70 transitions">
-      <p className="text-center align-middle secondary-body-uc button-padding cursor-pointer">
+      <p
+        title={displayText}
+        className="text-center align-middle secondary-body-uc button-padding cursor-pointer"
+      >
         {displayText}
       </p>
     </button>
@@ -12,7 +15,7 @@ export const Button = ({ displayText = "Download Resume" }) => {
 
 export const ButtonLink = ({ displayText = "Link", onClick }) => {
   return (
-    <button onClick={onClick} className="w-fit">
+    <button title={displayText} onClick={onClick} className="w-fit">
       <p className="secondary-body text-white/50 hover:text-white transitions cursor-pointer">
         {displayText}
       </p>

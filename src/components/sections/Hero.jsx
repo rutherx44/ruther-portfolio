@@ -1,8 +1,13 @@
 import React from "react";
 import profile from "../../assets/profile.png";
 import { Button, SocialButton } from "../Button";
+import toast from "react-hot-toast";
+import resume from "../../assets/ruther-dio-resume.pdf";
 
 const Hero = () => {
+  const handleDownload = () => {
+    toast("Resume Downloaded!");
+  };
   return (
     <>
       <section
@@ -34,7 +39,7 @@ const Hero = () => {
                 </p>
               </div>
               <div className="flex flex-col items-center justify-center md:flex-row gap-3 md:gap-2 lg:gap-2.5">
-                <a href={profile} download>
+                <a href={resume} download onClick={handleDownload}>
                   <Button />
                 </a>
                 <SocialButton />
