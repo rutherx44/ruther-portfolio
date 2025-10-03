@@ -1,13 +1,9 @@
 import React from "react";
 import { Button } from "../Button";
 import { Code, Sparkles } from "lucide-react";
-import toast from "react-hot-toast";
-import resume from "../../assets/ruther-dio-resume.pdf";
+import ResumeLimit from "../ResumeLimit";
 
 const About = () => {
-  const handleDownload = () => {
-    toast("Resume Downloaded!");
-  };
   return (
     <>
       <section
@@ -34,9 +30,7 @@ const About = () => {
               </p>
             </div>
             <div>
-              <a href={resume} download onClick={handleDownload}>
-                <Button />
-              </a>
+              <ResumeLimit />
             </div>
           </div>
           <div className="flex flex-col gap-4 md:gap-6 xl:gap-8 md:flex-row">

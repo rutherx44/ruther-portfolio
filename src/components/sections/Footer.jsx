@@ -1,26 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ButtonLink, SocialButton } from "../Button";
 import toast from "react-hot-toast";
 
 const Footer = () => {
-  const copyEmail = "ruther.diox44@gmail.com";
-  const [copied, setCopied] = useState(false);
+  const copyEmail = "ruther.diox04@gmail.com";
+  const COPY_LIMIT = 3;
+  const [copyCount, setCopyCount] = useState(0);
+
+  useEffect(() => {
+    const storedCount = localStorage.getItem("emailCopyCount");
+    if (storedCount) setCopyCount(Number(storedCount));
+  }, []);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(copyEmail);
-    setCopied(true);
-    toast(copyEmail + " Copied!");
+    if (copyCount >= COPY_LIMIT) {
+      toast.error("You’ve already copied the email!", { id: "Limit" });
+      return;
+    }
 
-    setTimeout(() => {
-      setCopied(false);
-    }, 3000);
+    navigator.clipboard.writeText(copyEmail);
+    const newCount = copyCount + 1;
+    setCopyCount(newCount);
+    localStorage.setItem("emailCopyCount", newCount);
+
+    toast.success(`${copyEmail} copied!`);
   };
 
   const handleScroll = (id) => {
     const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+    if (section) section.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleScrollTop = () => {
@@ -78,7 +86,7 @@ const Footer = () => {
                     onClick={handleCopy}
                     className="bg-primary secondary-body-uc px-2 md:px-2.5 xl:px-3 rounded-full text-white hover:bg-primary/70 transitions cursor-pointer"
                   >
-                    {copied ? "Copied!" : "Copy"}
+                    Copy
                   </button>
                 </div>
               </div>

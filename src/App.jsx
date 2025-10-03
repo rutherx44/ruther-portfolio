@@ -14,10 +14,21 @@ function App() {
         <Toaster
           position="top-right"
           toastOptions={{
-            style: {
-              background: "#052e16",
-              color: "#FFFFFF",
-              borderRadius: "0",
+            success: {
+              icon: null,
+              style: {
+                background: "#052e16",
+                color: "#FFFFFF",
+                borderRadius: "0",
+              },
+            },
+            error: {
+              icon: null,
+              style: {
+                background: "#4c0519",
+                color: "#FFFFFF",
+                borderRadius: "0",
+              },
             },
           }}
         />
