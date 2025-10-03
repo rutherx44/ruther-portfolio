@@ -57,7 +57,7 @@ export const SocialButton = () => {
           title="Linkedin"
           target="_blank"
           rel="noreferrer"
-          className="group border md:border-2 border-white/50 hover:border-white icon-container rounded-full transitions"
+          className="group border-[1.5px] md:border-2 border-white/50 hover:border-white icon-container rounded-full transitions"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,7 @@ export const SocialButton = () => {
           title="Github"
           target="_blank"
           rel="noreferrer"
-          className="group border md:border-2 border-white/50 hover:border-white icon-container rounded-full transitions"
+          className="group border-[1.5px] md:border-2 border-white/50 hover:border-white icon-container rounded-full transitions"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +119,7 @@ export const SocialButton = () => {
           title="Behance"
           target="_blank"
           rel="noreferrer"
-          className="group border md:border-2 border-white/50 hover:border-white icon-container rounded-full transitions"
+          className="group border-[1.5px] md:border-2 border-white/50 hover:border-white icon-container rounded-full transitions"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +149,7 @@ export const SocialButton = () => {
           title="Dribbble"
           target="_blank"
           rel="noreferrer"
-          className="group border md:border-2 border-white/50 hover:border-white icon-container rounded-full transitions"
+          className="group border-[1.5px] md:border-2 border-white/50 hover:border-white icon-container rounded-full transitions"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
