@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 
 const Footer = () => {
   const copyEmail = "ruther.diox04@gmail.com";
-  const COPY_LIMIT = 3;
+  const COPY_LIMIT = 1;
   const [copyCount, setCopyCount] = useState(0);
 
   useEffect(() => {
