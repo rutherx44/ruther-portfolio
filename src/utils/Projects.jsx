@@ -28,7 +28,7 @@ const projects = [
     image: ambiance,
     title: "Ambiance Interior Design Studio",
     alt: "Ambiance Interior Design Studio Landing Page",
-    badgeText: null,
+    badgeText: "freelance",
     role: "Development",
     credit: {
       design: "Roy Jeron Basada",
