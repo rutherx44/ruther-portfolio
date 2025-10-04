@@ -15,18 +15,17 @@ const About = () => {
             <h1 className="primary-heading transitions">About me</h1>
             <div className="flex flex-col md:w-1/2 gap-4 md:gap-6 xl:gap-8 text-white/50 secondary-body transitions">
               <p>
-                My journey to become a ui/ux designer and front-end developer
-                has been shaped by multiple experiments and a constant push to
-                improve.
+                As a career shifter, stepping into UI/UX design and front-end
+                development has been both challenging and rewarding.
               </p>
               <p>
-                I don’t have any experience in those fields, so I need to watch
-                numerous tutorials and read tons of documentation.
+                I started with zero experience, learning everything through
+                tutorials, documentation, and endless trial and error.
               </p>
               <p>
-                Every project has taken me through a wide range of emotions and
-                a generous amount of caffeine to design and build them from
-                scratch.
+                Every project I’ve built has been fueled by curiosity,
+                perseverance, and a lot of coffee — each one a small milestone
+                in my growth as a designer and developer.
               </p>
             </div>
             <div>
