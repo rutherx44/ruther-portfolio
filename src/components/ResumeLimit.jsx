@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import toast from "react-hot-toast";
 import resume from "../assets/ruther-dio-resume.pdf";
 import { Button } from "./Button";
@@ -6,13 +6,6 @@ import { Button } from "./Button";
 const ResumeLimit = () => {
   const MAX_DOWNLOADS = 1;
   const [downloadCount, setDownloadCount] = useState(0);
-
-  useEffect(() => {
-    const storedCount = localStorage.getItem("resumeDownloadCount");
-    if (storedCount) {
-      setDownloadCount(Number(storedCount));
-    }
-  }, []);
 
   const handleDownload = (e) => {
     if (downloadCount >= 1) {
@@ -25,7 +18,6 @@ const ResumeLimit = () => {
 
     const newCount = downloadCount + 1;
     setDownloadCount(newCount);
-    localStorage.setItem("resumeDownloadCount", newCount);
     toast.success("Resume Downloaded!");
   };
 

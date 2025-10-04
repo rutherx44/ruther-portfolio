@@ -2,10 +2,10 @@ import React from "react";
 
 export const Button = ({ displayText = "Download Resume" }) => {
   return (
-    <button className="bg-primary rounded-full hover:bg-primary/70 transitions">
+    <button className="bg-primary rounded-full hover:bg-primary/60 active:bg-logo-bg transitions cursor-pointer">
       <p
         title={displayText}
-        className="text-center align-middle secondary-body-uc button-padding cursor-pointer"
+        className="text-center align-middle secondary-body-uc button-padding "
       >
         {displayText}
       </p>
@@ -15,8 +15,12 @@ export const Button = ({ displayText = "Download Resume" }) => {
 
 export const ButtonLink = ({ displayText = "Link", onClick }) => {
   return (
-    <button title={displayText} onClick={onClick} className="w-fit">
-      <p className="secondary-body text-white/50 hover:text-white transitions cursor-pointer">
+    <button
+      title={displayText}
+      onClick={onClick}
+      className="w-fit cursor-pointer"
+    >
+      <p className="secondary-body text-white/50 hover:text-white transitions">
         {displayText}
       </p>
     </button>

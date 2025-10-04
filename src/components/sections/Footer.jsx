@@ -1,29 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { ButtonLink, SocialButton } from "../Button";
 import toast from "react-hot-toast";
 
 const Footer = () => {
   const copyEmail = "ruther.diox04@gmail.com";
-  const COPY_LIMIT = 1;
-  const [copyCount, setCopyCount] = useState(0);
-
-  useEffect(() => {
-    const storedCount = localStorage.getItem("emailCopyCount");
-    if (storedCount) setCopyCount(Number(storedCount));
-  }, []);
 
   const handleCopy = () => {
-    if (copyCount >= COPY_LIMIT) {
-      toast.error("You’ve already copied the email!", { id: "Limit" });
-      return;
-    }
-
     navigator.clipboard.writeText(copyEmail);
-    const newCount = copyCount + 1;
-    setCopyCount(newCount);
-    localStorage.setItem("emailCopyCount", newCount);
-
-    toast.success(`${copyEmail} copied!`);
+    toast.success(`${copyEmail} copied!`, {
+      id: "Limit",
+    });
   };
 
   const handleScroll = (id) => {
@@ -84,7 +70,7 @@ const Footer = () => {
                   <button
                     title="Copy Email"
                     onClick={handleCopy}
-                    className="bg-primary secondary-body-uc px-2 md:px-2.5 xl:px-3 rounded-full text-white hover:bg-primary/70 transitions cursor-pointer"
+                    className="bg-primary secondary-body-uc px-2 md:px-2.5 xl:px-3 rounded-full text-white hover:bg-primary/60 active:bg-logo-bg transitions cursor-pointer"
                   >
                     Copy
                   </button>
