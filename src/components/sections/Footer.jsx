@@ -1,17 +1,7 @@
 import React from "react";
 import { ButtonLink, SocialButton } from "../Button";
-import toast from "react-hot-toast";
 
 const Footer = () => {
-  const copyEmail = "ruther.diox04@gmail.com";
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(copyEmail);
-    toast.success(`${copyEmail} copied!`, {
-      id: "Limit",
-    });
-  };
-
   const handleScroll = (id) => {
     const section = document.getElementById(id);
     if (section) section.scrollIntoView({ behavior: "smooth" });
@@ -66,14 +56,15 @@ const Footer = () => {
               <div>
                 <p className="text-white">Email</p>
                 <div className="flex gap-1.5 md:gap-2 xl:gap-2.5">
-                  <p className="text-white/50">{copyEmail}</p>
-                  <button
-                    title="Copy Email"
-                    onClick={handleCopy}
-                    className="bg-primary secondary-body-uc px-2 md:px-2.5 xl:px-3 rounded-full text-white hover:bg-primary/60 active:bg-logo-bg transitions cursor-pointer"
+                  <a
+                    href="mailto:ruther.diox44@gmail.com"
+                    title="Send Mail"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-white/50 hover:text-white"
                   >
-                    Copy
-                  </button>
+                    ruther.diox04@gmail.com
+                  </a>
                 </div>
               </div>
               <div>
