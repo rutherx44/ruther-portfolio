@@ -79,7 +79,7 @@ const Footer = () => {
             </div>
           </div>
           <hr className="h-[0.3px] md:h-[0.4px] xl:h-[0.5px] border-0 bg-white/50"></hr>
-          <p className="text-white/50">
+          <p className="secondary-body text-white/50">
             © 2025. All rights reserved.
             <br />
             Designed and developed by Ruther Dio.
