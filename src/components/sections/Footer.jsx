@@ -18,9 +18,6 @@ const Footer = () => {
           <div className="flex flex-col gap-4 md:gap-6 xl:gap-8">
             <div className="flex items-center gap-1.5 md:gap-2 xl:gap-2.5">
               <h1 className="primary-display text-primary transitions">RD.</h1>
-              <h4 className="primary-body text-white transitions">
-                Ruther Dio
-              </h4>
             </div>
             <div className="flex flex-col items-start gap-3 md:gap-4 xl:gap-5">
               <p className="secondary-body text-white/50 md:w-1/2">
