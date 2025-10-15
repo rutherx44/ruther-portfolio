@@ -24,7 +24,7 @@ const Hero = () => {
               <br />
               Ruther Dio<span className="text-primary">.</span>
             </h1>
-            <div className="flex flex-col gap-3 md:gap-4 xl:gap-5 xl:items-start">
+            <div className="flex flex-col items-center gap-3 md:gap-4 xl:gap-5 xl:items-start">
               <div className="flex flex-col secondary-body text-center gap-1.5 md:gap-2.5 xl:gap-3 xl:text-start transitions">
                 <p className="text-white/50">
                   UI / UX Designer & Front-end Developer
